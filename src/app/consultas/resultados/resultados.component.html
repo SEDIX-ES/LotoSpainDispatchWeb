@@ -1,0 +1,59 @@
+<ng-container *ngIf="sorteoInfo">
+  <mat-card class="card">
+    <div class="contenedor">
+      <div class="cotenedor-imagen">
+        <img [src]="sorteoInfo.imagen" />
+        <p [style.color]="sorteoInfo.textcolor">
+          {{ sorteoInfo.nombre }}
+        </p>
+      </div>
+
+      <div class="contenedor-texto">
+        <div class="contenedor-titulo">
+          <p class="titulo">{{ sorteoInfo.titulo }}</p>
+          <svg
+            class="icono"
+            width="382"
+            height="63"
+            viewBox="0 0 382 63"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M254.786 30.0848H5.14835e-05"
+              stroke="black"
+              stroke-width="3"
+            />
+            <path
+              d="M295.126 1.77789L293.764 1.14957C293.944 0.759833 294.282 0.465781 294.693 0.341817C295.104 0.217854 295.548 0.275856 295.914 0.501147L295.126 1.77789ZM253.412 30.0849L253.182 31.5672C252.451 31.4538 251.912 30.8245 251.912 30.0849C251.912 29.3453 252.451 28.716 253.182 28.6026L253.412 30.0849ZM295.266 60.4417L296.058 61.7158C295.689 61.9453 295.238 62.0032 294.823 61.8746C294.407 61.746 294.068 61.4434 293.893 61.0454L295.266 60.4417ZM331.814 30.4096L332.836 29.3114C333.441 29.874 333.477 30.8198 332.917 31.4269L331.814 30.4096ZM296.488 2.40621C287.254 22.4234 264.938 29.8147 253.642 31.5672L253.182 28.6026C264.164 26.8989 285.175 19.7697 293.764 1.14957L296.488 2.40621ZM253.642 28.6026C259.428 29.5003 267.875 32.1374 276.012 37.1082C284.157 42.0839 292.073 49.4493 296.64 59.8381L293.893 61.0454C289.637 51.3635 282.225 44.419 274.448 39.6683C266.663 34.9127 258.594 32.4068 253.182 31.5672L253.642 28.6026ZM294.475 59.1677C308.099 50.702 319.868 41.1428 330.712 29.3923L332.917 31.4269C321.877 43.3883 309.896 53.117 296.058 61.7158L294.475 59.1677ZM330.792 31.5078C317.841 19.4582 306.959 10.8369 294.339 3.05464L295.914 0.501147C308.744 8.41326 319.783 17.1671 332.836 29.3114L330.792 31.5078Z"
+              fill="black"
+            />
+          </svg>
+        </div>
+
+        <p>{{ sorteoInfo.fecha | date : "dd/MM/YYYY" }}</p>
+        <ng-container *ngIf="sorteoInfo.resultados != null; else sinresultados">
+          <ng-container *ngIf="sorteoInfo.game_Id != 'LNAC'; else lanacional">
+            <p>
+              <strong>{{ sorteoInfo.resultados }}</strong>
+            </p>
+          </ng-container>
+          <ng-template #lanacional>
+            <p (click)="consul()">
+              Primer Premio: {{ sorteoInfo.combinacion?.primer_premio }}
+            </p>
+            <p>Segundo Premio: {{ sorteoInfo.combinacion?.Segundo_premio }}</p>
+            <h1>Reintegros:</h1>
+            <div class="reintegro">
+              <p *ngFor="let reintegros of sorteoInfo.reintegro">
+                {{ reintegros[0] }}
+              </p>
+            </div>
+          </ng-template>
+        </ng-container>
+
+        <ng-template #sinresultados> sin resultados </ng-template>
+      </div>
+    </div>
+  </mat-card>
+</ng-container>

@@ -1,0 +1,16 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <div class="title">
+      <h2>{{data.title}}</h2>
+      <p>Posted on <span class="sub">{{data.date}}</span> by <span
+          class="sub">{{data.author}}</span> | <span class="sub">{{data.tags}}</span></p>
+    </div>
+    <mat-icon (click)="openOptions()"
+      class="icono">more_vert</mat-icon>
+  </div>
+  <div class="modal-body">
+    <p>{{data.body}}</p>
+    <img src="../../../assets/decimo_loteria_navidad.jpg">
+    <button (click)="closeModal()">Cerrar</button>
+  </div>
+</div>

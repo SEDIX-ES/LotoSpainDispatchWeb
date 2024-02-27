@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+.card {
+  width: 530px;
+  height: 290px;
+  position: relative;
+  margin: 0 0 0 30px;
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 8px;
+  background-image: url("../../../assets/decimo_loteria_navidad.jpg");
+
+  &__seccion {
+    display: flex;
+    flex-direction: row;
+
+    &__numero {
+      width: 80%;
+      font-size: 50px;
+      margin-top: 6%;
+      margin-left: 35%;
+      font-family: 'Roboto',monospace;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 17px;
+      color: #000;
+      text-align: center;
+    }
+
+    &__frase {
+      font-family: 'Roboto',monospace;
+      text-align: center;
+      font-weight: 600;
+      margin-top: 13%;
+      margin-right: 5%;
+
+    &__serie {
+        width: 100%;
+        font-size: 35px;
+      }
+
+      &__fraccion {
+        font-size: 20px;
+        width: 100%;
+        margin-top: 65%;
+      }
+
+      &__precio {
+        width: 100%;
+        margin-top: 70%;
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+.compra {
+  width: 530px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  background: transparent;
+  margin-left: 40px;
+  :hover{
+    cursor: pointer;
+  }
+}
+
+.aceptar {
+  padding: 6px;
+  background: #41b808;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #fff;
+}
+
+.agotado {
+  padding: 6px;
+  background: red;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #fff;
+}
+
+.cardR{
+  width: 530px;
+  height: 290px;
+  position: relative;
+  margin: 0 0 0 30px;
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 8px;
+  background-image: url("../../../assets/Boleto_loteria_niño.jpg");
+}

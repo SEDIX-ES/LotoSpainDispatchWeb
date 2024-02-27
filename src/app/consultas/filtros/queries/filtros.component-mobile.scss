@@ -1,0 +1,23 @@
+@media screen and (max-width: 450px) {
+  .contenedor {
+    display: table;
+    align-items: center;
+  }
+
+  .date {
+    width: 90%;
+    flex: 1;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .filtronombre {
+    width: 90%;
+    margin-right: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-color: transparent;
+  }
+}

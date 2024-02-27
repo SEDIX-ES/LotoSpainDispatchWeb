@@ -1,0 +1,46 @@
+@media screen and (max-width: 900px) {
+  .title {
+    margin-left: 3%;
+    text-align: left;
+  }
+  .modal-body {
+    margin: 30px 0 0 20px;
+
+    button {
+      width: 20%;
+      margin-right: 10px;
+    }
+    img{
+      width: 80%;
+      height: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .modal-content{
+    width: 95%;
+  }
+  .modal-body{
+    padding: 0;
+    padding-bottom: 3%;
+    button{
+      width: max-content;
+      text-align: center;
+    }
+  }
+  .modal-header{
+    h2{
+      font-size: 15px;
+    }
+    p{
+      font-size: 13px ;
+    }
+  }
+  .title{
+    width: 75%;
+  }
+  .icono{
+    margin-right: 2%;
+  }
+}

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="container__boton1" routerLink="/"><span>Administración de lotería nº 1 de Viveiro</span></div>
+
+  <div class="container__centrarderecha">
+    <div class="container__boton2" (click)="irAWhatsApp()"><span>Whatsapp</span></div>
+    <mat-icon class="icono" (click)="irAWhatsApp()">message</mat-icon>
+    <div class="container__boton2" (click)="llamar()"><span>LLamar Ahora</span></div>
+    <mat-icon class="icono" (click)="llamar()">phone</mat-icon>
+    <div class="container__boton2" (click)="ubicacion()"><span>Cómo llegar</span></div>
+    <mat-icon class="icono" (click)="ubicacion()">place</mat-icon>
+    <div class="container__boton2"><span>Notificar uso inadecuado</span></div>
+    <mat-icon class="icono">error</mat-icon>
+  </div>
+</div>

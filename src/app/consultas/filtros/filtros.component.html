@@ -1,0 +1,19 @@
+<div class="contenedor">
+  <mat-form-field class="date">
+    <input
+      matInput
+      [matDatepicker]="picker"
+      placeholder="Seleccionar Fecha"
+      [(ngModel)]="selectDate"
+      (dateChange)="onDateSelected()"
+    />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field class="filtronombre">
+    <mat-label>Buscar por nombre</mat-label>
+    <input matInput [(ngModel)]="searchText" (input)="onSearchTextChanged()">
+  </mat-form-field>
+
+</div>

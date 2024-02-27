@@ -1,0 +1,101 @@
+.container {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  font-size: 36px;
+  font-family: Rajdhani, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+  color: #343434;
+  width: 100%;
+}
+
+.titulo
+.desaparece {
+  width: 100%;
+}
+
+.blue {
+  color: #1016b4;
+}
+
+.color-container {
+  display: flex; /* Hacer que los divs se muestren en línea */
+}
+.color-box {
+  width: 12vw; /* Ancho de cada caja de color */
+  height: 3px; /* Altura de cada caja de color */
+  margin-right: 0px; /* Espacio entre las cajas de color */
+  margin-top: 130px;
+}
+
+.azul {
+  background-color: #1c3a87;
+}
+.verde {
+  background-color: #4faa80;
+}
+.verdeamarillo {
+  background-color: #a3ab73;
+}
+.rojo {
+  background-color: #e67b80;
+}
+.azulclaro {
+  background-color: #4fa3d3;
+}
+.rojo {
+  background-color: #da5e5f;
+}
+.naranja {
+  background-color: #df976b;
+}
+.azulclaro {
+  background-color: #9fcfdc;
+}
+.ocre {
+  background-color: #f0cd7d;
+}
+
+.floritura {
+  width: 93px;
+  height: 34px;
+}
+
+.linea {
+  width: 510px;
+  height: 34px;
+}
+
+@media screen and (max-width: 450px) {
+  .container{
+
+    padding-bottom: 90px;
+  }
+
+  .card-container {
+    margin-bottom: 0;
+  }
+
+  .header {
+    font-size: 30px;
+  }
+
+  .floritura {
+    width: 46.5px;
+    height: 17px;
+  }
+
+  .linea {
+    width: 255px;
+    height: 17px;
+  }
+}

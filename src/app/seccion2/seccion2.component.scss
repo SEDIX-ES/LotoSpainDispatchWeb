@@ -1,0 +1,30 @@
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-family: Rajdhani, sans-serif;
+  font-size: 36px;
+}
+
+.texto {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.fondoblanco {
+  background-color: white;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-right: 50px;
+  margin-left: 20px;
+}
+
+.div1 {
+  text-align: center;
+  width: 20%;
+}
+
