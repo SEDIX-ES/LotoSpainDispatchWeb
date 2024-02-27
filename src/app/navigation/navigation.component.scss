@@ -1,0 +1,194 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.sidenav-container {
+  height: 100%;
+}
+
+.linea{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3%;
+
+  &__title{
+    margin:0 0 0 5%;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Rajdhani, sans-serif;
+  }
+}
+
+.sidenav {
+  width: 50vh;
+
+  &__item {
+    width: 18vw;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    :hover {
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    &__number {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      background-color: #8689eb;
+      border-radius: 40px;
+      padding: 2px 8px;
+      margin-left: 30px;
+    }
+    &__text {
+      width: 13vw;
+      height: 5vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &__block {
+    width: 18vw;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  overflow: hidden;
+  overflow-x: auto;
+
+  &__enlaces {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 10px;
+
+    &__titulo {
+      color: #252a34;
+      font-family: Rajdhani, sans-serif;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border: none;
+      background-color: white;
+      :hover {
+        cursor: pointer;
+      }
+      margin: 30px 0 0 30px;
+    }
+
+    &__botones {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 30px 30px 0 0;
+      :hover {
+        cursor: pointer;
+      }
+
+      &__simple {
+        color: #252a34;
+        font-family: Roboto, sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-right: 20px;
+        border: none;
+        background-color: white;
+        :hover {
+          cursor: pointer;
+        }
+        & a {
+          text-decoration: none !important ;
+          color: black;
+        }
+      }
+      &__whats {
+        color: #1016b4;
+        font-family: Roboto, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-right: 20px;
+        border: none;
+        background-color: white;
+        :hover {
+          cursor: pointer;
+        }
+        & a {
+          text-decoration: none !important;
+          color: inherit;
+        }
+      }
+      &__boton {
+        border: 1px solid black;
+        border-radius: 5px;
+        background: #1016b4;
+        color: #fff;
+        font-family: Roboto, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 4px 8px;
+        :hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.blue {
+  color: #1016b4;
+}
+
+.premios {
+  background-color: lightgray;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.prueba {
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  background-color: white;
+  flex-direction: row-reverse;
+  position: relative;
+}
+
+.nav-toggle {
+  display: none;
+}

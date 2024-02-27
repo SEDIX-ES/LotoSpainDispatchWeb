@@ -1,0 +1,18 @@
+<div class="news-card">
+  <div class="header">
+    <div class="profile-image">{{iniciales}}</div>
+    <div class="titulo">
+      <h2 class="titulo__title">{{ noticia.title }}</h2>
+      <div class="titulo__author">por {{ noticia.author }}</div>
+    </div>
+    <mat-icon (click)="openOptions()">more_vert</mat-icon>
+  </div>
+  <div class="content">
+    <img src="../../../assets/decimo_loteria_navidad.jpg"
+      class="news-image">
+    <h2 class="content__title">{{ noticia.title }}</h2>
+    <p class="content__body">{{ noticia.body }}</p>
+  </div>
+  <button (click)="openNews(noticia)"
+    class="read-more">Leer más</button>
+</div>

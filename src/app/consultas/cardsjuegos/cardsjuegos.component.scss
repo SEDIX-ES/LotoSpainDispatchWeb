@@ -1,0 +1,36 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card {
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 90px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+h1 {
+  font-size: 20px;
+  line-height: 1.5rem;
+  text-align: center;
+  font-family: Public Sans, sans-serif;
+  padding: 0;
+}
+
+button {
+  border-radius: 15px;
+  width: 145px;
+  font-family: Segoe UI, sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+.mat-mdc-card-content {
+  padding: 0;
+}
