@@ -1,0 +1,27 @@
+<div class="contenedor">
+  <div class="ganadores">
+    <div class="ganador">
+      <div class="head">
+        <div class="logo"></div>
+        <p>QUÍNTUPLE PLUS</p>
+        <p *ngIf="resultado!=null">Jornada {{resultado.jornada}}ª - {{resultado.fecha | date: 'shortDate' }}</p>
+      </div>
+      <div class="error" *ngIf="resultado==null">NO HAY REGISTRO DE SORTEO ESE DÍA</div>
+      <div class="ganador__combinacion" *ngIf="resultado!=null">
+        <div class="combi">
+          <div class="row" *ngFor="let ganador of resultado.combinacion; let i=index">
+            <p *ngIf="(i+1)!=6" class="row__title">{{i+1}}.Carrera {{i+1}}</p>
+            <p *ngIf="(i+1)==6" class="row__title">{{i+1}}.Carrera 5 (2º Clasificado)</p>
+            <div class="row__number">
+              <img src="../../../assets/resultados/caballofondo.svg" class="caballo">
+              <p class="resultado">{{ganador}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="botones">
+    <button class="boton" (click)="closeDialog()">Cerrar</button>
+  </div>
+</div>

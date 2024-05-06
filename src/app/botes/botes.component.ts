@@ -1,42 +1,70 @@
 import { Component, OnInit } from '@angular/core';
+import { CantidadInterface } from '../models/cantidad.interface';
+import { BotesService } from '../services/botes.service';
+import { BoteInterface } from '../models/bote.interface';
 
 @Component({
   selector: 'app-botes',
   templateUrl: './botes.component.html',
-  styleUrls: ['./botes.component.scss','./queries/botes.component-mobile.scss'],
+  styleUrls: [
+    './botes.component.scss',
+    './queries/botes.component-mobile.scss',
+  ],
 })
 export class BotesComponent implements OnInit {
-  botes:number[]=[0,0,0,0,0,0,0,0,0,0];
-  booleanos:boolean[]=[false,false,false,false,false,false,false,false,false,false]
+  ultimosBotes!: BoteInterface[];
+  millones:boolean[]=[false,false,false,false,false,false,false,false,false,false,];
+
+  constructor(private _botes: BotesService) {}
 
   ngOnInit(): void {
-    //TODO implementar API botes
     this.obtenerBotes();
-    this.botesAMostrar();
   }
 
   obtenerBotes() {
-    this.botes[0] = 17000000;
-    this.botes[1] = 3600000;
-    this.botes[2] = 0;
-    this.botes[3] = 9100000;
-    this.botes[4] = 20000;
-    this.botes[5] = 600000;
-    this.botes[6] = 0;
-    this.botes[7] = 1230000;
-    this.botes[8] = 120000;
-    this.botes[9] = 22000;
+    this._botes.getUltimos().subscribe({
+      next: (res: any) => {
+        this.ultimosBotes = res;
+        console.log(this.ultimosBotes);
+      },
+      error: (err) => {
+        console.log('Error al obtener los botes', err);
+      },
+      complete: () => {},
+    });
   }
 
-  botesAMostrar() {
-    var i:number;
-    for(i=0;i<this.botes.length;i++){
-      if(this.botes[i]==0){
 
-      }else if(this.botes[i]/1000000>1){
-        this.botes[i]=this.botes[i]/1000000;
-        this.booleanos[i]=true;
-      }
+  esFechaAnterior(fecha: Date): boolean {
+    const fechaActual: Date = new Date();
+    const fechaBote = new Date(fecha);
+
+    // Crear nuevas fechas solo con año, mes y día
+    const fechaActualSinHora: Date = new Date(
+      fechaActual.getFullYear(),
+      fechaActual.getMonth(),
+      fechaActual.getDate()
+    );
+    const fechaSinHora: Date = new Date(
+      fechaBote.getFullYear(),
+      fechaBote.getMonth(),
+      fechaBote.getDate()
+    );
+
+    // Comparar solo el día
+    if (fechaSinHora < fechaActualSinHora) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  sonMillones(cantidad:number, indice:number):number{
+    if(cantidad/1000000>1){
+      this.millones[indice]=true;
+      return cantidad/1000000;
+    }else{
+      return cantidad;
     }
   }
 }

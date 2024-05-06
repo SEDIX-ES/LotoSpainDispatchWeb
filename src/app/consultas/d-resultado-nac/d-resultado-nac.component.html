@@ -1,0 +1,28 @@
+<div class="contenedor">
+  <div class="ganadores">
+    <div class="ganador">
+      <div class="head">
+        <div class="logo"></div>
+        <p>LOTERÍA NACIONAL<span *ngIf="resultado.tipo!='Extraordinario'">-{{resultado.tipo}}</span></p>
+        <p *ngIf="resultado!=null">{{resultado.fecha | date: 'shortDate' }}</p>
+      </div>
+      <div class="error" *ngIf="resultado==null">NO HAY REGISTRO DE SORTEO ESE DÍA</div>
+      <div class="ganador__combinacion" *ngIf="resultado!=null">
+        <p *ngIf="resultado.tipo=='Extraordinario'" class="extra">{{resultado.nombreExtra}}</p>
+        <div class="combi">
+          <div>1<sup>er</sup> premio<br><span>{{resultado.combinacion1}}</span></div>
+          <div>2º premio<br><span>{{resultado.combinacion2}}</span></div>
+        </div>
+        <div class="extras">
+          <div class="columna"*ngFor="let rein of resultado.reintegros">
+            <div class="numero-combi comp">{{rein}}</div>
+            <p>R</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="botones">
+    <button class="boton" (click)="closeDialog()">Cerrar</button>
+  </div>
+</div>

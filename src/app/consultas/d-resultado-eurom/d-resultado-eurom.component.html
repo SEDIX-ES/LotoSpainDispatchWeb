@@ -1,0 +1,25 @@
+<div class="contenedor">
+  <div class="ganadores">
+    <div class="ganador">
+      <div class="head">
+        <div class="logo"></div>
+        <p>EUROMILLONES</p>
+        <p *ngIf="resultado!=null">{{resultado.fecha | date: 'shortDate' }}</p>
+      </div>
+      <div class="error" *ngIf="resultado==null">NO HAY REGISTRO DE SORTEO ESE DÍA</div>
+      <div class="ganador__combinacion" *ngIf="resultado!=null">
+        <div class="combi">
+          <div class="numero-combi" *ngFor="let item of resultado.combinacion">
+            {{item}}
+          </div>
+        </div>
+        <div class="extras">
+          <div class="estrella" *ngFor="let est of resultado.estrellas">{{est}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="botones">
+    <button class="boton" (click)="closeDialog()">Cerrar</button>
+  </div>
+</div>

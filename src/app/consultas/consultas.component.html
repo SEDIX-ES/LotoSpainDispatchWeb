@@ -1,5 +1,4 @@
 <div class="container">
-  <!-- <app-botes></app-botes> -->
   <div class="header">
     <div class="titulo">Comprueba <span class="blue">tus</span> resultados</div>
 
@@ -38,9 +37,7 @@
 
     <app-filtros (filterChanged)="onFilterChanged($event)" (dateSelected)="onDateSelected($event)"></app-filtros>
 
-    <app-cardsjuegos [filterText]="filterText" [fecha]="fecha"
-      (respuestaResultado)="onRespuestaResultado($event)"></app-cardsjuegos>
-    <app-resultados [sorteoInfo]="resultadosInfo"></app-resultados>
+    <app-cardsjuegos [filterText]="filterText" [fecha]="fecha" class="centrar"></app-cardsjuegos>
 
 
   </div>

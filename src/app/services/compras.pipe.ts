@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { InterfazBoleto } from '../models/BoletoInterface';
+import { InterfazBoleto } from '../models/boletoInterface';
 
 @Pipe({
   name: 'compras'

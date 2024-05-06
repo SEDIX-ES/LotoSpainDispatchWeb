@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Component, Input, OnInit, ElementRef } from '@angular/core';
 import { ProductosService } from '../services/productos.service';
-import { InterfazBoleto } from '../models/BoletoInterface';
+import { InterfazBoleto } from '../models/boletoInterface';
 
 @Component({
   selector: 'app-compras',

@@ -75,6 +75,10 @@
   height: 34px;
 }
 
+.centrar{
+  align-self: center;
+  width: 80%;
+}
 @media screen and (max-width: 450px) {
   .container{
 
@@ -98,4 +102,9 @@
     width: 255px;
     height: 17px;
   }
+
+  .centrar{
+    width: 100%;
+  }
 }
+

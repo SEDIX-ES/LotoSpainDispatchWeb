@@ -26,6 +26,14 @@ const routes: Routes = [
     path: 'noticias',
     component: NoticiasComponent,
   },
+  {
+    path: 'botes',
+    component: BotesComponent,
+  },
+  {
+    path: 'noticia',
+    component: NoticiaModalComponent,
+  }
 ];
 
 @NgModule({

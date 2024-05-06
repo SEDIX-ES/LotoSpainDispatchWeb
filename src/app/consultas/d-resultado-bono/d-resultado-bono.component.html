@@ -1,0 +1,32 @@
+<div class="contenedor">
+  <div class="ganadores">
+    <div class="ganador">
+      <div class="head">
+        <div class="logo"></div>
+        <p>BONOLOTO</p>
+        <p *ngIf="resultado!=null">{{resultado.fecha | date: 'shortDate' }}</p>
+      </div>
+      <div class="error" *ngIf="resultado==null">NO HAY REGISTRO DE SORTEO ESE DÍA</div>
+      <div class="ganador__combinacion" *ngIf="resultado!=null">
+        <div class="combi" >
+          <div class="numero-combi" *ngFor="let item of resultado.combinacion">
+            {{item}}
+          </div>
+        </div>
+        <div class="extras">
+          <div class="columna">
+            <div class="numero-combi comp">{{resultado.complementario}}</div>
+            <p>C</p>
+          </div>
+          <div class="columna">
+            <div class="numero-combi">{{resultado.reintegro}}</div>
+            <p>R</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="botones">
+    <button class="boton" (click)="closeDialog()">Cerrar</button>
+  </div>
+</div>

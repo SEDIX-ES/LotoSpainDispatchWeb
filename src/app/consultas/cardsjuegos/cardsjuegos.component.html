@@ -7,7 +7,7 @@
         <h1 [style.color]="card.textColor">{{ card.title }}</h1>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button [style.background-color]="card.btnColor" [disabled]="!btnIsActive" (click)="consultar(card)">
+        <button mat-button [style.background-color]="card.btnColor" [disabled]="!btnIsActive" (click)="consultar(card.title)">
           {{ card.buttonText }}
         </button>
       </mat-card-actions>

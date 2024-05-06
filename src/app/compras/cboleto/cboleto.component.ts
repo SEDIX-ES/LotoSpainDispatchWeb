@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { InterfazBoleto } from 'src/app/models/BoletoInterface';
+import { InterfazBoleto } from 'src/app/models/boletoInterface';
 import { WhatsappService } from 'src/app/services/whatsapp.service';
 
 @Component({
@@ -12,13 +12,18 @@ import { WhatsappService } from 'src/app/services/whatsapp.service';
 })
 export class CboletoComponent {
   @Input() value!: InterfazBoleto;
-
+  cantidad:number = 1;
   constructor(
     private _whatsappservice: WhatsappService
   ) { }
 
-  comprar(numero: string) {
-    const msg = "¡Hola! Me pongo en contacto con usted porque me gustaría comprar el número " + numero + ". Quedo a la espera de su respuesta.";
+  comprar(numero: string, reyes:boolean) {
+    var msg:string;
+    if(reyes){
+      msg = "¡Hola! Me pongo en contacto con usted porque me gustaría comprar " + this.cantidad +" boletos del número " + numero + " para el sorteo de navidad. Quedo a la espera de su respuesta.";
+    }else{
+      msg = "¡Hola! Me pongo en contacto con usted porque me gustaría comprar " + this.cantidad +" boletos del número " + numero + " para el sorteo del niño. Quedo a la espera de su respuesta.";
+    }
 
     this._whatsappservice.redirigirAWhatsApp(msg);
   }

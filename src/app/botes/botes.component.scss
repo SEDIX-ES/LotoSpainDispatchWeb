@@ -1,3 +1,5 @@
+@import url('../theme/custom.scss');
+
 .grid-botes{
     display: grid;
     font-family: Rajdhani, sans-serif;
@@ -9,73 +11,73 @@
 }
 
 .eurom{
-    border-bottom: 6px solid #001367;
-    color: #001367;
+    border-bottom: 6px solid var(--euromillones);
+    color: var(--euromillones);
   :hover{
-      background-image: linear-gradient(to top,#001367,#fff);
+      background-image: linear-gradient(to top,var(--euromillones),#fff);
   }
 }
 .primi{
-    border-bottom: 6px solid #008547;
-    color:#008547;
+    border-bottom: 6px solid var(--primitiva);
+    color:var(--primitiva);
   :hover{
-      background-image: linear-gradient(to top,#008547,#fff);
+      background-image: linear-gradient(to top,var(--primitiva),#fff);
   }
 }
 .bono{
-    border-bottom: 6px solid #7a8634;
-    color:#7a8634;
+    border-bottom: 6px solid var(--bonoloto);
+    color:var(--bonoloto);
   :hover{
-      background-image: linear-gradient(to top,#7a8634,#fff);
+      background-image: linear-gradient(to top,var(--bonoloto),#fff);
   }
 }
 .gordo{
-    border-bottom: 6px solid #dc3f47;
-    color:#dc3f47;
+    border-bottom: 6px solid var(--gordo);
+    color:var(--gordo);
     :hover{
-      background-image: linear-gradient(to top,#dc3f47,#fff);
+      background-image: linear-gradient(to top,var(--gordo),#fff);
   }
 }
 .eurod{
-    border-bottom: 6px solid #6b3e98;
-    color:#6b3e98;
+    border-bottom: 6px solid var(--eurodreams);
+    color:var(--eurodreams);
   :hover{
-      background-image: linear-gradient(to top,#6b3e98,#fff);
+      background-image: linear-gradient(to top,var(--eurodreams),#fff);
   }
 }
 .lotn{
-    border-bottom: 6px solid #007ac0;
-    color:#007ac0;
+    border-bottom: 6px solid var(--nacional);
+    color:var(--nacional);
   :hover{
-      background-image: linear-gradient(to top,#007ac0,#fff);
+      background-image: linear-gradient(to top,var(--nacional),#fff);
   }
 }
 .quini{
-    border-bottom: 6px solid #CB1517;
-    color:#CB1517;
+    border-bottom: 6px solid var(--quiniela);
+    color:var(--quiniela);
   :hover{
-      background-image: linear-gradient(to top,#CB1517,#fff);
+      background-image: linear-gradient(to top,var(--quiniela),#fff);
   }
 }
 .lotot{
-    border-bottom: 6px solid #d16929;
-    color: #d16929;
+    border-bottom: 6px solid var(--lototurf);
+    color: var(--lototurf);
     :hover{
-      background-image: linear-gradient(to top,#d16929,#fff);
+      background-image: linear-gradient(to top,var(--lototurf),#fff);
   }
 }
 .quinig{
-    border-bottom: 6px solid #74bacd;
-    color:#74bacd;
+    border-bottom: 6px solid var(--quinigol);
+    color:var(--quinigol);
   :hover{
-      background-image: linear-gradient(to top,#74bacd,#fff);
+      background-image: linear-gradient(to top,var(--quinigol),#fff);
   }
 }
 .quint{
-    border-bottom: 6px solid #eab842;
-    color:#eab842;
+    border-bottom: 6px solid var(--quintuple);
+    color:var(--quintuple);
   :hover{
-      background-image: linear-gradient(to top,#eab842,#fff);
+      background-image: linear-gradient(to top,var(--quintuple),#fff);
   }
 }
 

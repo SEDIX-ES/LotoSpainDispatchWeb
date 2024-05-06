@@ -1,17 +1,10 @@
-<div *ngIf="!reyes()"
-  class="scala">
+<div *ngIf="!reyes()" class="scala">
   <div class="card">
     <div class="card__seccion">
       <div class="card__seccion__numero">
         {{value.numero}}
       </div>
       <div class="card__seccion__frase">
-        <div class="card__seccion__frase__serie">
-          {{value.serie}}ª
-        </div>
-        <div class="card__seccion__frase__fraccion">
-          {{value.fraccion}}ª
-        </div>
         <div class="card__seccion__frase__precio">
           {{value.precio}}
         </div>
@@ -19,25 +12,18 @@
     </div>
   </div>
   <div class="compra">
-    <button class="aceptar"
-      (click)="comprar(value.numero)">Comprar boleto</button>
+    <button class="aceptar" (click)="comprar(value.numero, true)">Comprar boleto</button>
+    <input type="number" class="cantidad" [(ngModel)]="cantidad">
   </div>
 </div>
 
-<div *ngIf="reyes()"
-  class="scala">
+<div *ngIf="reyes()" class="scala">
   <div class="cardR">
     <div class="card__seccion">
       <div class="card__seccion__numero">
         {{value.numero}}
       </div>
       <div class="card__seccion__frase">
-        <div class="card__seccion__frase__serie">
-          {{value.serie}}ª
-        </div>
-        <div class="card__seccion__frase__fraccion">
-          {{value.fraccion}}ª
-        </div>
         <div class="card__seccion__frase__precio">
           {{value.precio}}
         </div>
@@ -45,7 +31,7 @@
     </div>
   </div>
   <div class="compra">
-    <button class="aceptar"
-      (click)="comprar(value.numero)">Comprar boleto</button>
+    <button class="aceptar" (click)="comprar(value.numero, false)">Comprar boleto</button>
+    <input type="number" class="cantidad" [(ngModel)]="cantidad">
   </div>
 </div>
