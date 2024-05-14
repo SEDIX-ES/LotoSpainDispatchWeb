@@ -1,0 +1,152 @@
+@import url('../theme/custom.scss');
+
+.grid-botes{
+    display: grid;
+    font-family: Rajdhani, sans-serif;
+    grid-template-columns: repeat(10, 10%);
+    width: 100%;
+    height: 15vh;
+    text-align: center;
+    background-color: white;
+}
+
+.eurom{
+    border-bottom: 6px solid var(--euromillones);
+    color: var(--euromillones);
+  :hover{
+      background-image: linear-gradient(to top,var(--euromillones),#fff);
+  }
+}
+.primi{
+    border-bottom: 6px solid var(--primitiva);
+    color:var(--primitiva);
+  :hover{
+      background-image: linear-gradient(to top,var(--primitiva),#fff);
+  }
+}
+.bono{
+    border-bottom: 6px solid var(--bonoloto);
+    color:var(--bonoloto);
+  :hover{
+      background-image: linear-gradient(to top,var(--bonoloto),#fff);
+  }
+}
+.gordo{
+    border-bottom: 6px solid var(--gordo);
+    color:var(--gordo);
+    :hover{
+      background-image: linear-gradient(to top,var(--gordo),#fff);
+  }
+}
+.eurod{
+    border-bottom: 6px solid var(--eurodreams);
+    color:var(--eurodreams);
+  :hover{
+      background-image: linear-gradient(to top,var(--eurodreams),#fff);
+  }
+}
+.lotn{
+    border-bottom: 6px solid var(--nacional);
+    color:var(--nacional);
+  :hover{
+      background-image: linear-gradient(to top,var(--nacional),#fff);
+  }
+}
+.quini{
+    border-bottom: 6px solid var(--quiniela);
+    color:var(--quiniela);
+  :hover{
+      background-image: linear-gradient(to top,var(--quiniela),#fff);
+  }
+}
+.lotot{
+    border-bottom: 6px solid var(--lototurf);
+    color: var(--lototurf);
+    :hover{
+      background-image: linear-gradient(to top,var(--lototurf),#fff);
+  }
+}
+.quinig{
+    border-bottom: 6px solid var(--quinigol);
+    color:var(--quinigol);
+  :hover{
+      background-image: linear-gradient(to top,var(--quinigol),#fff);
+  }
+}
+.quint{
+    border-bottom: 6px solid var(--quintuple);
+    color:var(--quintuple);
+  :hover{
+      background-image: linear-gradient(to top,var(--quintuple),#fff);
+  }
+}
+
+.imagen{
+    z-index: 1 ;
+    width: 90%;
+    height: 60%;
+    margin-left: 5%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#eurom{
+    background-image: url('../../assets/iloveimg-resized/cabecera_EuromillonesAJ.png');
+}
+
+#primi{
+    background-image: url('../../assets/iloveimg-resized/cabecera_PrimitivaAJ.png');
+}
+
+#bono{
+    background-image: url('../../assets/iloveimg-resized/cabecera_BonolotoAJ.png');
+}
+
+#gordo{
+    background-image: url('../../assets/iloveimg-resized/cabecera_ElGordoAJ.png');
+}
+
+#eurod{
+    background-image: url('../../assets/iloveimg-resized/cabecera_EuroDreamsAJ.png');
+}
+
+#lotn{
+    background-image: url('../../assets/iloveimg-resized/cabecera_LoteriaNacionalAJ.png');
+}
+
+#quini{
+    background-image: url('../../assets/iloveimg-resized/cabecera_LaQuinielaAJ.png');
+}
+
+#lotot{
+    background-image: url('../../assets/iloveimg-resized/cabecera_LototurfAJ.png');
+}
+
+#quinig{
+    background-image: url('../../assets/iloveimg-resized/cabecera_QuinigolAJ.png');
+}
+
+#quint{
+    background-image: url('../../assets/iloveimg-resized/cabecera_QuintupleAJ.png');
+}
+
+.bote{
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 5%;
+  margin-bottom: 1%;
+}
+
+.euros{
+  font-size: 20px;
+}
+
+.millones{
+  font-size: 18px;
+}
+.dream{
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+}

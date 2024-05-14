@@ -1,0 +1,62 @@
+<nav class="navbar menu-2">
+  <div class="linea">
+    <p class="linea__title" routerLink="/">ADMINISTRACIÓN Nº1<span class="blue">VIVEIRO</span></p>
+    <mat-icon class="nav-toggle" id="_toggle" (click)="toggleMenu()">list</mat-icon>
+  </div>
+
+  <div class="nav-items" id="_items" [ngClass]="{ open: isMenuOpen }" [@entrarSalir]>
+    <div class="nav-buttons">
+      <button class="container__enlaces__botones__simple" routerLink="/compras" (click)="toggleMenu()">
+        Compra tu boleto
+      </button>
+      <button class="container__enlaces__botones__simple" routerLink="/noticias" (click)="toggleMenu()">
+        Noticias
+      </button>
+      <button class="container__enlaces__botones__simple" routerLink="/consultas" (click)="toggleMenu()">
+        Resultados
+      </button>
+      <button class="container__enlaces__botones__simple" (click)="llamar()">
+        Contacta con nosotros
+      </button>
+      <button class="container__enlaces__botones__whats" (click)="irAWhatsApp()">
+        WhatsApp
+      </button>
+      <button class="container__enlaces__botones__boton" (click)="ubicacion()">
+        Como llegar
+      </button>
+    </div>
+  </div>
+</nav>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+    <header class="container menu-1">
+      <div class="container__enlaces">
+        <button class="container__enlaces__titulo" (click)="goHome()">
+          ADMINISTRACIÓN Nº1 <span class="blue">VIVEIRO</span>
+        </button>
+        <div class="container__enlaces__botones">
+          <button class="container__enlaces__botones__simple" (click)="comprarBoleto()">
+            Compra tu boleto
+          </button>
+          <button class="container__enlaces__botones__simple" routerLink="/noticias">
+            Noticias
+          </button>
+          <button class="container__enlaces__botones__simple" (click)="consultas()">
+            Resultados
+          </button>
+          <button class="container__enlaces__botones__simple" (click)="llamar()">Llamar ahora
+          </button>
+          <button class="container__enlaces__botones__whats" (click)="irAWhatsApp()">WhatsApp
+          </button>
+          <button class="container__enlaces__botones__boton" (click)="ubicacion()">
+            Como llegar
+          </button>
+        </div>
+      </div>
+      <app-botes></app-botes>
+    </header>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

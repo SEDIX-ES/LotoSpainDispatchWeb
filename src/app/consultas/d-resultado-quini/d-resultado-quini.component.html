@@ -1,0 +1,26 @@
+<div class="contenedor">
+  <div class="ganador">
+    <div class="head">
+      <div class="logo"></div>
+      <p>QUINIELA</p>
+      <p *ngIf="resultado!=null">Jornada {{resultado.jornada}}ª - {{resultado.fecha | date: 'shortDate' }}</p>
+    </div>
+    <div class="error" *ngIf="resultado==null">NO HAY REGISTRO DE SORTEO ESE DÍA</div>
+    <div class="ganador__combinacion" *ngIf="resultado!=null">
+      <div class="combi">
+        <div class="partido" *ngFor="let partido of resultado.partidos; let  i = index">
+          <p *ngIf="(i+1)!=15">{{i+1}}.{{partido.local}}</p>
+          <p *ngIf="(i+1)==15">P{{i+1}}.{{partido.local}}</p>
+          <p>-</p>
+          <p>{{partido.visitante}}</p>
+          <p class="partido__marcador">{{partido.resultado}}</p>
+          <p class="partido__resultado" *ngIf="(i+1)!=15">{{comprobarResultado(partido.resultado)}}</p>
+          <p class="partido__resultado" *ngIf="(i+1)==15">{{obtenerPleno(partido.resultado)}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="botones">
+    <button class="boton" (click)="closeDialog()">Cerrar</button>
+  </div>
+</div>

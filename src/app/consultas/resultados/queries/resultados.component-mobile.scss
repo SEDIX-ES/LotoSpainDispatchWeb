@@ -1,0 +1,27 @@
+@media screen and (max-width: 450px) {
+  .contenedor {
+    width: 344px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cotenedor-imagen {
+    width: 100%;
+    align-items: center;
+  }
+
+  .cotenedor-imagen img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contenedor-titulo .icono {
+    display: none;
+  }
+
+  .cotenedor-imagen p {
+    margin: 0;
+    padding-right: 3px;
+  }
+}

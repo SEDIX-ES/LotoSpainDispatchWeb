@@ -1,0 +1,55 @@
+@media (max-width: 468px) {
+  .contenedor {
+    flex-direction: column;
+    margin-bottom: 0.75rem;
+  }
+
+  .contder {
+    width: 100%;
+    order: 2;
+  }
+  .contizq {
+    display: flex;
+    width: 100%;
+    order: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    width: 40%;
+    height: 4rem;
+    color: white;
+    background: #1016b4;
+    border: transparent;
+    border-radius: 5px;
+    font-family: Open Sans, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .img-container {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+  }
+
+  img {
+    width: 175px;
+  }
+
+  .texto1 {
+    color: #343434;
+    font-family: Rajdhani, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+  }
+  .texto2 {
+    color: #1016b4;
+    font-family: Rajdhani, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+  }
+}

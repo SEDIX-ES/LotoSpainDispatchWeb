@@ -1,0 +1,64 @@
+@media screen and (max-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    background-color: blue;
+    color: white;
+    &__boton1 {
+      width: 30%;
+      font-size: 20px;
+      font-family: "Rajdhani", sans-serif;
+      text-align: center;
+    }
+    &__boton2 {
+      // width: 40%;
+      // font-size: 15px;
+      // font-family: 'open sans', sans-serif;
+      // text-align: center;
+      display: none;
+    }
+    span {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: row;
+    justify-content: flex-start;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 8vh;
+    background-color: blue;
+    color: white;
+
+    &__centrarderecha {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    &__boton1 {
+      width: 100%;
+      font-size: 15px;
+      text-align: center;
+      margin: 0;
+    }
+
+    &__boton2 {
+      display: none;
+    }
+  }
+  .icono {
+    display: block;
+  }
+}

@@ -1,0 +1,22 @@
+@media screen and (max-width: 900px) {
+  .div1 {
+    width: 80%;
+    margin-left: 40px;
+  }
+  .container {
+    column-count: 2;
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .div1 {
+    width: 90%;
+    margin-left: 20px;
+    margin-top: 40px;
+  }
+  .container {
+    column-count: 1;
+    display: block !important;
+  }
+}

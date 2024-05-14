@@ -1,0 +1,53 @@
+@media screen and (max-width: 900px) {
+  .header {
+    font-size: 30px;
+  }
+  .columna_movil{
+    display: flex;
+    flex-direction: column;
+  }
+  .seccion {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10vh;
+  }
+  .grid-container {
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header {
+    font-size: 30px;
+  }
+  .grid-container {
+    margin-top: 2%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12vh;
+  }
+
+  .seccion{
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .floritura {
+    width: 46.5px;
+    height: 17px;
+  }
+
+  .linea {
+    width: 255px;
+    height: 17px;
+  }
+}

@@ -1,0 +1,24 @@
+<div class="contenedor">
+  <div class="ganador">
+    <div class="head">
+      <div class="logo"></div>
+      <p>QUINIGOL</p>
+      <p *ngIf="resultado!=null">Jornada {{resultado.jornada}}ª - {{resultado.fecha | date: 'shortDate' }}</p>
+    </div>
+    <div class="error" *ngIf="resultado==null">NO HAY REGISTRO DE SORTEO ESE DÍA</div>
+    <div class="ganador__combinacion" *ngIf="resultado!=null">
+      <div class="combi">
+        <div class="partido" *ngFor="let partido of resultado.partidos; let  i = index">
+          <p>{{i+1}}.{{partido.local}}</p>
+          <p>-</p>
+          <p>{{partido.visitante}}</p>
+          <p class="partido__marcador">{{partido.resultado}}</p>
+          <p class="partido__resultado">{{modificarResultado(partido.resultado)}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="botones">
+    <button class="boton" (click)="closeDialog()">Cerrar</button>
+  </div>
+</div>

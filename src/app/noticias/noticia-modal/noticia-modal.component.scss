@@ -1,0 +1,54 @@
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: ma;
+  height: max-content;
+  background-color: white;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 90%;
+  padding: 30px 0 5% 5%;
+  button {
+    align-self: flex-end;
+    width: max-content;
+    padding: 6px 12px 6px 12px;
+    background-color: #006783;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 25px;
+    font-size: 16px;
+    color: white;
+    margin-right: 40px;
+  }
+}
+
+.icono {
+  font-size: 24px;
+  margin-right: 5%;
+}
+
+.title {
+  width: 90%;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.sub {
+  font-weight: 500;
+  text-decoration: underline;
+}
