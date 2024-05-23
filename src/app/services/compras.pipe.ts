@@ -12,7 +12,7 @@ export class ComprasPipe implements PipeTransform {
     }else{
       return data.filter((boleto)=>
       {
-        return boleto.numero==filtro
+        return boleto.numero.includes(filtro)
       })
     }
   }
