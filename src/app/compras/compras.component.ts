@@ -62,22 +62,22 @@ export class ComprasComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // this.getProductos();
+     this.getProductos();
   }
 
-  // getProductos(){
-  //   this.productService.getAll().subscribe({
-  //     next: (res: any) => {
-  //       const result: InterfazBoleto[] = res;
-  //       this.data = result.filter(products => this.disponibility(products.disponibilidad));
-  //       console.log(res)
-  //     },
-  //     error: (error) => {
-  //       console.log('ERROR OBTENIENDO LOS DATOS', error)
-  //     },
-  //     complete: () =>{}
-  //   })
-  // }
+   getProductos(){
+    this.productService.getAll().subscribe({
+     next: (res: any) => {
+         const result: InterfazBoleto[] = res;
+         this.data = result.filter(products => this.disponibility(products.disponibilidad));
+         console.log(res)
+       },
+       error: (error) => {
+         console.log('ERROR OBTENIENDO LOS DATOS', error)
+       },
+       complete: () =>{}
+     })
+   }
 
   onTextChange(text: string) {
     this.filtro = text;
